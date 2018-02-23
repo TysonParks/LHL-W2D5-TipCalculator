@@ -37,9 +37,9 @@
     self.tipPercentageTextField.delegate = self;
     
     // Assign initial property values
-    self.billAmountTextField.text = @"Bill Total";
+    self.billAmountTextField.text = @"0.00";
     self.tipAmountLabel.text = @"";
-    self.tipPercentageTextField.text = @"15%%";
+    self.tipPercentageTextField.text = @"15%";
   
 }
 
