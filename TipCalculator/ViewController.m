@@ -8,12 +8,15 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <UITextFieldDelegate>
+@interface ViewController () /* <UITextFieldDelegate> */
 
 @property (strong, nonatomic) NSString *tipPercentage;
 @property (strong, nonatomic) NSString *tipAmount;
 @property (strong, nonatomic) NSString *billAmount;
-//@property (nonatomic) float tipPercentageDecimalValue;
+
+@property (nonatomic) float billAmountValue;
+@property (nonatomic) float tipPercentageValue;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UIButton *calculateTipButton;
@@ -30,14 +33,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Assign UITextField delegates
-    [[self billAmountTextField] setDelegate:self];
-    self.billAmountTextField.delegate = self;
-    [[self tipPercentageTextField] setDelegate:self];
-    self.tipPercentageTextField.delegate = self;
+//    // Assign UITextField delegates
+//    [[self billAmountTextField] setDelegate:self];
+//    self.billAmountTextField.delegate = self;
+//    [[self tipPercentageTextField] setDelegate:self];
+//    self.tipPercentageTextField.delegate = self;
     
     // Assign initial property values
-    self.billAmountTextField.text = @"0.00";
+    self.billAmountValue = 0.0;
+    self.tipPercentageValue = 0.15;
+    self.billAmountTextField.text = @"$0.00";
     self.tipAmountLabel.text = @"";
     self.tipPercentageTextField.text = @"15%";
   
