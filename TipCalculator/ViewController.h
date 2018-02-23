@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface ViewController : UIViewController 
 
-
-@property (nonatomic, weak) id<UITextFieldDelegate> delegate;
 
 @end
+
 

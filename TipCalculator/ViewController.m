@@ -8,12 +8,12 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSString *tipPercentage;
 @property (strong, nonatomic) NSString *tipAmount;
 @property (strong, nonatomic) NSString *billAmount;
-@property (nonatomic) float tipPercentageDecimalValue;
+//@property (nonatomic) float tipPercentageDecimalValue;
 
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UIButton *calculateTipButton;
@@ -21,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
 
 - (IBAction)calculateTip:(id)sender;
-- (IBAction)changeTipPercentage:(id)sender;
 
 @end
 
@@ -30,41 +29,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
+    // Assign UITextField delegates
+    [[self billAmountTextField] setDelegate:self];
+    self.billAmountTextField.delegate = self;
+    [[self tipPercentageTextField] setDelegate:self];
+    self.tipPercentageTextField.delegate = self;
+    
+    // Assign initial property values
     self.billAmountTextField.text = @"Bill Total";
     self.tipAmountLabel.text = @"";
-    self.tipPercentageDecimalValue = 0.15;
-    self.tipPercentage = [NSString stringWithFormat:@"%.0f%%", (self.tipPercentageDecimalValue * 100)];
-    
-    //assign delegate???
-//    self.billAmountTextField.delegate;
-    
-    
-    
+    self.tipPercentageTextField.text = @"15%%";
+  
 }
 
 
--(void)textFieldDidEndEditing:(UITextField *)textField {
-    NSLog(@"Text entered");
-    self.billAmount =  self.billAmountTextField.text;
-    
-}
+//-(void)textFieldDidEndEditing:(UITextField *)textField {
+//    NSLog(@"Text entered");
+//    if (textField == self.tipPercentageTextField) {
+////        [self changeTipPercentage];
+//    }
+//    ;
+//
+//}
 
 - (IBAction)calculateTip:(id)sender {
-   //Calculate 15% tip on amount entered into billAmountTextField
+   //Calculate tip based on Bill amount and tip percentage
     self.billAmount = self.billAmountTextField.text;
+    self.tipPercentage = self.tipPercentageTextField.text;
+    
+    
     float billAmountValue = [self.billAmount floatValue];
-    float tipAmountValue = billAmountValue * 0.15;
+    float tipPercentageValue = [self.tipPercentage floatValue] * 0.01;
+    float tipAmountValue = billAmountValue * tipPercentageValue;
+    
     self.tipAmount = [NSString stringWithFormat:@"%.2f", tipAmountValue];
     // Assign value to tip amount label
     self.tipAmountLabel.text = [NSString stringWithFormat:@"You should tip: $%@",self.tipAmount];
 }
 
-- (IBAction)changeTipPercentage:(id)sender {
-    self.tipPercentage = self.tipPercentageTextField.text;
-    float tipPercentageDecimalValue = [self.tipPercentage floatValue] * 100.0;
-}
+
 
 
 
