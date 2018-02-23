@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UIButton *calculateTipButton;
+@property (weak, nonatomic) IBOutlet UILabel *tipAmountLabel;
+
 
 @end
 
@@ -26,6 +28,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.billAmountTextField.text = @"Bill Total";
+    self.tipAmountLabel.text = @"";
     
     //assign delegate???
 //    self.billAmountTextField.delegate;
@@ -47,7 +50,8 @@
     float billAmountValue = [self.billAmount floatValue];
     float tipAmountValue = billAmountValue * 0.15;
     self.tipAmount = [NSString stringWithFormat:@"%.2f", tipAmountValue];
-    NSLog(@"Tip amount: %@", self.tipAmount);
+    // Assign value to tip amount label
+    self.tipAmountLabel.text = [NSString stringWithFormat:@"You should tip: $%@",self.tipAmount];
 }
 
 
