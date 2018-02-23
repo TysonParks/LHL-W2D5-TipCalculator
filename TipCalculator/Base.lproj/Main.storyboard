@@ -24,8 +24,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbm-DW-bfw">
-                                <rect key="frame" x="16" y="158" width="343" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbm-DW-bfw">
+                                <rect key="frame" x="142.5" y="158" width="90" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Calculate Tip"/>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7T-AR-scB"/>
@@ -36,6 +37,7 @@
                         <constraints>
                             <constraint firstItem="hYK-Xl-oIk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HOE-BF-4JM"/>
                             <constraint firstItem="Qbm-DW-bfw" firstAttribute="top" secondItem="hYK-Xl-oIk" secondAttribute="bottom" constant="8" id="MT9-l2-NbY"/>
+                            <constraint firstItem="Qbm-DW-bfw" firstAttribute="centerX" secondItem="hYK-Xl-oIk" secondAttribute="centerX" id="aMx-QE-GX9"/>
                             <constraint firstItem="hYK-Xl-oIk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="mYM-S9-TvW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
