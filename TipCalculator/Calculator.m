@@ -13,17 +13,12 @@
 
 -(NSString *)calculateTipFromTipPercentage:(NSString *)tipPercentage AndBillAmount:(NSString *)billAmount {
     //Calculate tip based on Bill amount and tip percentage;
-    
-    
     self.billAmountValue = [billAmount floatValue];
     self.tipPercentageValue = [tipPercentage floatValue] * 0.01;
     self.tipAmountValue = self.billAmountValue * self.tipPercentageValue;
     
-    self.tipAmount = [NSString stringWithFormat:@"%.2f", tipAmountValue];
-    // Assign value to tip amount label
-    self.tipAmountLabel.text = [NSString stringWithFormat:@"You should tip: $%@",self.tipAmount];
-    
-    return
+    self.tipAmount = [NSString stringWithFormat:@"%.2f", self.tipAmountValue];
+    return self.tipAmount;
 }
 
 @end
