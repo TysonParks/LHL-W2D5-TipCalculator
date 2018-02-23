@@ -19,6 +19,8 @@
 @property (nonatomic) float billAmountValue;
 @property (nonatomic) float tipPercentageValue;
 
+@property (strong, nonatomic) Calculator *calculator;
+
 // UI Elements
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
@@ -41,6 +43,7 @@
 //    [[self tipPercentageTextField] setDelegate:self];
 //    self.tipPercentageTextField.delegate = self;
     
+    self.calculator = [[Calculator alloc] init];
     
     // Assign initial property values
     self.billAmountValue = 0.0;
@@ -52,17 +55,11 @@
 
 // Action Methods (should become calls to model instead)
 - (IBAction)calculateTip:(id)sender {
-   //Calculate tip based on Bill amount and tip percentage
-    self.billAmount = self.billAmountTextField.text;
-    self.tipPercentage = self.tipPercentageTextField.text;
+    // Call calculator method calculateTipFrom...
+    
+    self.tipAmount = [self.calculator calculateTipFromTipPercentage:self.self.tipPercentageTextField.text AndBillAmount:self.billAmountTextField.text];
     
     
-    float billAmountValue = [self.billAmount floatValue];
-    float tipPercentageValue = [self.tipPercentage floatValue] * 0.01;
-    float tipAmountValue = billAmountValue * tipPercentageValue;
-    
-    self.tipAmount = [NSString stringWithFormat:@"%.2f", tipAmountValue];
-    // Assign value to tip amount label
     self.tipAmountLabel.text = [NSString stringWithFormat:@"You should tip: $%@",self.tipAmount];
 }
 
