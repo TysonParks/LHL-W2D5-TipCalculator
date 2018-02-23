@@ -19,7 +19,7 @@
 @property (nonatomic) float billAmountValue;
 @property (nonatomic) float tipPercentageValue;
 
-
+// UI Elements
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
 @property (weak, nonatomic) IBOutlet UIButton *calculateTipButton;

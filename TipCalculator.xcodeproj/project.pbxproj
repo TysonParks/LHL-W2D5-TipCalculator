@@ -62,12 +62,12 @@
 			isa = PBXGroup;
 			children = (
 				AD8C5AE220407DD600487BE7 /* Main.storyboard */,
-				AD8C5AF22040D0D800487BE7 /* Calculator.h */,
-				AD8C5AF32040D0D800487BE7 /* Calculator.m */,
 				AD8C5ADC20407DD600487BE7 /* AppDelegate.h */,
 				AD8C5ADD20407DD600487BE7 /* AppDelegate.m */,
 				AD8C5ADF20407DD600487BE7 /* ViewController.h */,
 				AD8C5AE020407DD600487BE7 /* ViewController.m */,
+				AD8C5AF22040D0D800487BE7 /* Calculator.h */,
+				AD8C5AF32040D0D800487BE7 /* Calculator.m */,
 				AD8C5AE520407DD600487BE7 /* Assets.xcassets */,
 				AD8C5AE720407DD600487BE7 /* LaunchScreen.storyboard */,
 				AD8C5AEA20407DD600487BE7 /* Info.plist */,

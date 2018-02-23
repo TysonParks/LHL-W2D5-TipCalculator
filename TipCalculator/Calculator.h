@@ -10,4 +10,15 @@
 
 @interface Calculator : NSObject
 
+// Float properties (should move/repeat to model)
+@property (nonatomic) float billAmountValue;
+@property (nonatomic) float tipPercentageValue;
+@property (nonatomic) float tipAmountValue;
+@property (strong, nonatomic) NSString *tipAmount;
+
+
+
+// Instance methods
+-(NSString*) calculateTipFromTipPercentage:(NSString*)tipPercentage AndBillAmount: (NSString*) billAmount;
+
 @end
