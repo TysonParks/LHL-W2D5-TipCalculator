@@ -10,13 +10,18 @@
 
 @interface ViewController ()
 
-@property(strong, nonatomic) NSString *tipAmount;
+@property (strong, nonatomic) NSString *tipPercentage;
+@property (strong, nonatomic) NSString *tipAmount;
 @property (strong, nonatomic) NSString *billAmount;
+@property (nonatomic) float tipPercentageDecimalValue;
 
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UIButton *calculateTipButton;
 @property (weak, nonatomic) IBOutlet UILabel *tipAmountLabel;
+@property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
 
+- (IBAction)calculateTip:(id)sender;
+- (IBAction)changeTipPercentage:(id)sender;
 
 @end
 
@@ -29,6 +34,8 @@
     
     self.billAmountTextField.text = @"Bill Total";
     self.tipAmountLabel.text = @"";
+    self.tipPercentageDecimalValue = 0.15;
+    self.tipPercentage = [NSString stringWithFormat:@"%.0f%%", (self.tipPercentageDecimalValue * 100)];
     
     //assign delegate???
 //    self.billAmountTextField.delegate;
@@ -53,6 +60,12 @@
     // Assign value to tip amount label
     self.tipAmountLabel.text = [NSString stringWithFormat:@"You should tip: $%@",self.tipAmount];
 }
+
+- (IBAction)changeTipPercentage:(id)sender {
+    self.tipPercentage = self.tipPercentageTextField.text;
+    float tipPercentageDecimalValue = [self.tipPercentage floatValue] * 100.0;
+}
+
 
 
 @end
