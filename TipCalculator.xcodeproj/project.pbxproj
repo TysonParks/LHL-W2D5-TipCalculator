@@ -13,6 +13,7 @@
 		AD8C5AE620407DD600487BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD8C5AE520407DD600487BE7 /* Assets.xcassets */; };
 		AD8C5AE920407DD600487BE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8C5AE720407DD600487BE7 /* LaunchScreen.storyboard */; };
 		AD8C5AEC20407DD600487BE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C5AEB20407DD600487BE7 /* main.m */; };
+		AD8C5AF42040D0D800487BE7 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C5AF32040D0D800487BE7 /* Calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		AD8C5AE820407DD600487BE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD8C5AEA20407DD600487BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD8C5AEB20407DD600487BE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD8C5AF22040D0D800487BE7 /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		AD8C5AF32040D0D800487BE7 /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				AD8C5AE220407DD600487BE7 /* Main.storyboard */,
+				AD8C5AF22040D0D800487BE7 /* Calculator.h */,
+				AD8C5AF32040D0D800487BE7 /* Calculator.m */,
 				AD8C5ADC20407DD600487BE7 /* AppDelegate.h */,
 				AD8C5ADD20407DD600487BE7 /* AppDelegate.m */,
 				AD8C5ADF20407DD600487BE7 /* ViewController.h */,
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD8C5AE120407DD600487BE7 /* ViewController.m in Sources */,
+				AD8C5AF42040D0D800487BE7 /* Calculator.m in Sources */,
 				AD8C5AEC20407DD600487BE7 /* main.m in Sources */,
 				AD8C5ADE20407DD600487BE7 /* AppDelegate.m in Sources */,
 			);
