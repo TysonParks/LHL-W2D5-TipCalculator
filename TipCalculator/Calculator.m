@@ -10,7 +10,6 @@
 
 @implementation Calculator
 
-
 -(NSString *)calculateTipFromTipPercentage:(NSString *)tipPercentage AndBillAmount:(NSString *)billAmount {
     //Calculate tip based on Bill amount and tip percentage;
     self.billAmountValue = [billAmount floatValue];

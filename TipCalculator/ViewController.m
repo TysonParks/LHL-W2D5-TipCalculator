@@ -15,10 +15,7 @@
 @property (strong, nonatomic) NSString *tipAmount;
 @property (strong, nonatomic) NSString *billAmount;
 
-// Float properties (should move/repeat to model)
-//@property (nonatomic) float billAmountValue;
-//@property (nonatomic) float tipPercentageValue;
-
+// Class pointers
 @property (strong, nonatomic) Calculator *calculator;
 
 // UI Elements
@@ -52,10 +49,6 @@
     self.tipAmountLabel.text = @"";
     self.tipPercentageTextField.text = @"15%";
     
-//    [self.tipAmountLabel ]
-    
-    self.billAmountTextField.keyboardType = UIKeyboardTypeNumberPad;
-    self.tipPercentageTextField.keyboardType = UIKeyboardTypeNumberPad;
 }
 
 // Action Methods (should become calls to model instead)
@@ -66,19 +59,6 @@
     
     self.tipAmountLabel.text = [NSString stringWithFormat:@"You should tip: $%@",self.tipAmount];
 }
-
-
-
-//-(void)textFieldDidEndEditing:(UITextField *)textField {
-//    NSLog(@"Text entered");
-//    if (textField == self.tipPercentageTextField) {
-////        [self changeTipPercentage];
-//    }
-//    ;
-//
-//}
-
-
 
 
 @end
